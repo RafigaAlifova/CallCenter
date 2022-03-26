@@ -1,4 +1,44 @@
-﻿using Business.Abstract;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FormUI.CRUDForms
+{
+    public partial class Test : Form
+    {
+        public Test()
+        {
+            InitializeComponent();
+        }
+
+        private void panelSearch_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbProfessions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+    }
+}
+
+/*
+ 
+ using Business.Abstract;
 using Business.DependencyResolvers.Ninject;
 using Core.DependencyResolvers.Ninject;
 using Entities.Concrete;
@@ -27,7 +67,7 @@ namespace FormUI.CRUDForms
         //sql cedvellerimiz getirmek ucun
         private void LoadEmployees()
         {
-           this.dgwEmployees.DataSource = this._employeeService.GetAll();
+           // this.dgwEmployees.DataSource = this._employeeService.GetAll();
         }
         private void LoadProfessions()
         {
@@ -43,6 +83,23 @@ namespace FormUI.CRUDForms
             this.cmbCompanies.ValueMember = "Id";
 
         }
+
+        private void dgwEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //this.tbxFirstNameAdd.Text =
+            //   this.dgwEmployees.CurrentRow?.Cells["FirstName"].Value.ToString();
+            //this.tbxLastNameAdd.Text =
+            //   this.dgwEmployees.CurrentRow?.Cells["LastName"].Value.ToString();
+            //this.cmbProfessions.SelectedValue =
+            //  this.dgwEmployees.CurrentRow?.Cells["ProfessionId"].Value;
+            //this.cmbCompanies.SelectedValue =
+            //this.dgwEmployees.CurrentRow?.Cells["CompanyId"].Value;
+            //this.ckbStatusAdd.Checked = (bool)this.dgwEmployees.CurrentRow?.Cells["IsFree"].Value;
+
+        }
+
+        
+      
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
             this.LoadProfessions();
@@ -87,7 +144,7 @@ namespace FormUI.CRUDForms
         {
             this._employeeService.Update(new Employee
             {
-                Id = (int)this.dgwEmployees.CurrentRow?.Cells["Id"].Value,
+               // Id = (int)this.dgwEmployees.CurrentRow?.Cells["Id"].Value,
                 FirstName = this.tbxFirstNameAdd.Text,
                 LastName = this.tbxLastNameAdd.Text,
                 ProfessionId = (int)this.cmbProfessions.SelectedValue,
@@ -104,7 +161,7 @@ namespace FormUI.CRUDForms
         {
             this._employeeService.Delete(new Employee
             {
-                Id = (int)this.dgwEmployees.CurrentRow?.Cells["Id"].Value
+                //Id = (int)this.dgwEmployees.CurrentRow?.Cells["Id"].Value
 
             }
 
@@ -113,18 +170,10 @@ namespace FormUI.CRUDForms
 
         }
 
-        private void dgwEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            this.tbxFirstNameAdd.Text =
-               this.dgwEmployees.CurrentRow?.Cells["FirstName"].Value.ToString();
-            this.tbxLastNameAdd.Text =
-               this.dgwEmployees.CurrentRow?.Cells["LastName"].Value.ToString();
-            this.cmbProfessions.SelectedValue =
-              this.dgwEmployees.CurrentRow?.Cells["ProfessionId"].Value;
-            this.cmbCompanies.SelectedValue =
-            this.dgwEmployees.CurrentRow?.Cells["CompanyId"].Value;
-            this.ckbStatusAdd.Checked = (bool)this.dgwEmployees.CurrentRow?.Cells["IsFree"].Value;
-
-        }
+       
     }
 }
+
+ 
+ 
+ */

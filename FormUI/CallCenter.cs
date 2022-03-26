@@ -10,9 +10,9 @@ namespace FormUI
     {
         //DEPENDENCE INJECTION:
        private readonly IEmployeeService _employeeService;
-       private readonly IRequestService _requestService;
-       private readonly  ICompanyService _companyService;
-       private readonly  IProfessionService _professionService;
+       //private readonly IRequestService _requestService;
+       //private readonly  ICompanyService _companyService;
+       //private readonly  IProfessionService _professionService;
 
         public CallCenter()
         {
