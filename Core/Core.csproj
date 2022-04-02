@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,7 @@
     <Compile Include="DataAccess\Abstract\IEntityRepository.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="DataAccess\Extension\DbSetExtention.cs" />
+    <Compile Include="DataAccess\Extension\ObjectExtensions.cs" />
     <Compile Include="DependencyResolvers\Ninject\InstanceFactory.cs" />
     <Compile Include="Entities\Abstract\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

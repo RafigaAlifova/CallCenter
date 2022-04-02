@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.DependencyResolvers.Ninject;
+using Core.DataAccess.Extension;
 using Core.DependencyResolvers.Ninject;
 using Entities.Concrete;
 using System;
@@ -34,6 +35,9 @@ namespace FormUI.CRUDForms
             this.cmbProfessions.DataSource = this._professionService.GetAll();
             this.cmbProfessions.DisplayMember = "Name";
             this.cmbProfessions.ValueMember = "Id";
+            this.cmbProfessionsSearch.DataSource = this._professionService.GetAll();
+            this.cmbProfessionsSearch.DisplayMember = "Name";
+            this.cmbProfessionsSearch.ValueMember = "Id";
 
         }
         private void LoadCompanies()
@@ -41,6 +45,9 @@ namespace FormUI.CRUDForms
             this.cmbCompanies.DataSource = this._companyService.GetAll();
             this.cmbCompanies.DisplayMember = "Name";
             this.cmbCompanies.ValueMember = "Id";
+            this.cmbCompaniesSearch.DataSource = this._companyService.GetAll();
+            this.cmbCompaniesSearch.DisplayMember = "Name";
+            this.cmbCompaniesSearch.ValueMember = "Id";
 
         }
         private void EmployeeForm_Load(object sender, EventArgs e)
@@ -50,26 +57,7 @@ namespace FormUI.CRUDForms
             this.LoadCompanies();
         }
        
-        //private void tbxFirstNameSearch_TextChanged(object sender, EventArgs e)
-        //{
-        //    //var text = tbxFirstNameSearch.Text;
-        //    //if (!String.IsNullOrEmpty(text))
-        //    //{
-        //    //    dgwEmployee.DataSource = this._employeeService.Get(text);
-        //    //}
-        //    //else LoadEmployees();
-        //}
-
-        //private void cmbProfessionSearch_TextChanged(object sender, EventArgs e)
-        //{
-        //    //try
-        //    //{
-        //    //    dgwMovies.DataSource = _movieService
-        //    //        .GetByGenreId((int)cbxGenreId.SelectedValue);
-        //    //}
-        //    //catch { }
-        //}
-
+      
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this._employeeService.Add(new Employee
@@ -124,6 +112,29 @@ namespace FormUI.CRUDForms
             this.cmbCompanies.SelectedValue =
             this.dgwEmployees.CurrentRow?.Cells["CompanyId"].Value;
             this.ckbStatusAdd.Checked = (bool)this.dgwEmployees.CurrentRow?.Cells["IsFree"].Value;
+
+        }
+
+        private void panelSearch_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string firstName = this.tbxFirstNameSearch.Text;
+            string lastName = this.tbxLastNameSearch.Text;
+            int professionId = this.cmbProfessionsSearch.SelectedValue.ToInt();
+            int companyId = this.cmbCompaniesSearch.SelectedValue.ToInt();
+            bool status = ckbStatusSearch.Checked;
+            int strParam = this.SearchParameters.SelectedIndex;
+
+            this.dgwEmployees.DataSource =
+                this._employeeService.Search(firstName,lastName, professionId,companyId,status, strParam);
+        }
+
+        private void dgwEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

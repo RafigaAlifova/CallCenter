@@ -52,6 +52,7 @@
     <Compile Include="Concrete\EmployeeManager.cs" />
     <Compile Include="Concrete\ProfessionManager.cs" />
     <Compile Include="Concrete\RequestManager.cs" />
+    <Compile Include="Constants\BusinessMessages.cs" />
     <Compile Include="DependencyResolvers\Ninject\BusinessModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

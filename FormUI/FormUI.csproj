@@ -78,12 +78,6 @@
     <Compile Include="CRUDForms\EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUDForms\ProfessionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUDForms\ProfessionForm.Designer.cs">
-      <DependentUpon>ProfessionForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="CRUDForms\Test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +91,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUDForms\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRUDForms\ProfessionForm.resx">
-      <DependentUpon>ProfessionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUDForms\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
