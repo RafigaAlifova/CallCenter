@@ -115,10 +115,7 @@ namespace FormUI.CRUDForms
 
         }
 
-        private void panelSearch_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -133,9 +130,6 @@ namespace FormUI.CRUDForms
                 this._employeeService.Search(firstName,lastName, professionId,companyId,status, strParam);
         }
 
-        private void dgwEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -29,8 +29,8 @@ namespace FormUI.CRUDForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbCompanies = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -38,8 +38,7 @@ namespace FormUI.CRUDForms
             this.panel5 = new System.Windows.Forms.Panel();
             this.tbxFirstNameAdd = new System.Windows.Forms.TextBox();
             this.gbxSearch = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.SearchParameters = new System.Windows.Forms.ComboBox();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cmbCompaniesSearch = new System.Windows.Forms.ComboBox();
@@ -56,6 +55,9 @@ namespace FormUI.CRUDForms
             this.label5 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.ckbStatusSearch = new System.Windows.Forms.CheckBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.SearchParameters = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.btnUpdate = new FontAwesome.Sharp.IconButton();
@@ -73,21 +75,21 @@ namespace FormUI.CRUDForms
             this.panelGrid = new System.Windows.Forms.Panel();
             this.dgwEmployees = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.panelSidebar = new System.Windows.Forms.TableLayoutPanel();
             this.gbxCRUD = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panelSidebar = new System.Windows.Forms.TableLayoutPanel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.gbxSearch.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -95,10 +97,8 @@ namespace FormUI.CRUDForms
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwEmployees)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.gbxCRUD.SuspendLayout();
             this.panelSidebar.SuspendLayout();
+            this.gbxCRUD.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -175,40 +175,15 @@ namespace FormUI.CRUDForms
             this.gbxSearch.TabStop = false;
             this.gbxSearch.Text = "SEARCH";
             // 
-            // btnSearch
+            // panel12
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnSearch.IconColor = System.Drawing.Color.Black;
-            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 25;
-            this.btnSearch.Location = new System.Drawing.Point(470, 10);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 30);
-            this.btnSearch.TabIndex = 32;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // SearchParameters
-            // 
-            this.SearchParameters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchParameters.BackColor = System.Drawing.Color.White;
-            this.SearchParameters.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.SearchParameters.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchParameters.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.SearchParameters.FormattingEnabled = true;
-            this.SearchParameters.Items.AddRange(new object[] {
-            "Start",
-            "Contain",
-            "End"});
-            this.SearchParameters.Location = new System.Drawing.Point(314, 10);
-            this.SearchParameters.Name = "SearchParameters";
-            this.SearchParameters.Size = new System.Drawing.Size(89, 24);
-            this.SearchParameters.TabIndex = 31;
+            this.panel12.Controls.Add(this.tableLayoutPanel2);
+            this.panel12.Controls.Add(this.panel11);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(3, 16);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(558, 275);
+            this.panel12.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -408,10 +383,56 @@ namespace FormUI.CRUDForms
             this.ckbStatusSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ckbStatusSearch.UseVisualStyleBackColor = true;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.SearchParameters);
+            this.panel11.Controls.Add(this.btnSearch);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(558, 49);
+            this.panel11.TabIndex = 3;
+            // 
+            // SearchParameters
+            // 
+            this.SearchParameters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchParameters.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SearchParameters.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.SearchParameters.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchParameters.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.SearchParameters.FormattingEnabled = true;
+            this.SearchParameters.Items.AddRange(new object[] {
+            "Start",
+            "Contain",
+            "End"});
+            this.SearchParameters.Location = new System.Drawing.Point(314, 10);
+            this.SearchParameters.Name = "SearchParameters";
+            this.SearchParameters.Size = new System.Drawing.Size(89, 24);
+            this.SearchParameters.TabIndex = 31;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnSearch.IconColor = System.Drawing.Color.Black;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 25;
+            this.btnSearch.Location = new System.Drawing.Point(470, 10);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.TabIndex = 32;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.Ban;
             this.btnDelete.IconColor = System.Drawing.Color.Black;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -429,6 +450,7 @@ namespace FormUI.CRUDForms
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
             this.btnAdd.IconColor = System.Drawing.Color.Black;
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -446,6 +468,7 @@ namespace FormUI.CRUDForms
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.btnUpdate.IconColor = System.Drawing.Color.Black;
             this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -618,18 +641,18 @@ namespace FormUI.CRUDForms
             // 
             // dgwEmployees
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgwEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgwEmployees.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -638,7 +661,6 @@ namespace FormUI.CRUDForms
             this.dgwEmployees.Size = new System.Drawing.Size(787, 597);
             this.dgwEmployees.TabIndex = 1;
             this.dgwEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwEmployees_CellClick);
-            this.dgwEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwEmployees_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
@@ -654,39 +676,6 @@ namespace FormUI.CRUDForms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1439, 673);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.SearchParameters);
-            this.panel11.Controls.Add(this.btnSearch);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(558, 49);
-            this.panel11.TabIndex = 3;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.tableLayoutPanel2);
-            this.panel12.Controls.Add(this.panel11);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 16);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(558, 275);
-            this.panel12.TabIndex = 0;
-            // 
-            // gbxCRUD
-            // 
-            this.gbxCRUD.Controls.Add(this.tableLayoutPanel3);
-            this.gbxCRUD.Controls.Add(this.panelButtons);
-            this.gbxCRUD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbxCRUD.ForeColor = System.Drawing.Color.Teal;
-            this.gbxCRUD.Location = new System.Drawing.Point(3, 369);
-            this.gbxCRUD.Name = "gbxCRUD";
-            this.gbxCRUD.Size = new System.Drawing.Size(564, 295);
-            this.gbxCRUD.TabIndex = 1;
-            this.gbxCRUD.TabStop = false;
-            this.gbxCRUD.Text = "CRUD";
             // 
             // panelSidebar
             // 
@@ -704,6 +693,19 @@ namespace FormUI.CRUDForms
             this.panelSidebar.Size = new System.Drawing.Size(570, 667);
             this.panelSidebar.TabIndex = 1;
             // 
+            // gbxCRUD
+            // 
+            this.gbxCRUD.Controls.Add(this.tableLayoutPanel3);
+            this.gbxCRUD.Controls.Add(this.panelButtons);
+            this.gbxCRUD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbxCRUD.ForeColor = System.Drawing.Color.Teal;
+            this.gbxCRUD.Location = new System.Drawing.Point(3, 369);
+            this.gbxCRUD.Name = "gbxCRUD";
+            this.gbxCRUD.Size = new System.Drawing.Size(564, 295);
+            this.gbxCRUD.TabIndex = 1;
+            this.gbxCRUD.TabStop = false;
+            this.gbxCRUD.Text = "CRUD";
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -719,6 +721,7 @@ namespace FormUI.CRUDForms
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.gbxSearch.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -729,6 +732,7 @@ namespace FormUI.CRUDForms
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.panelButtons.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -739,10 +743,8 @@ namespace FormUI.CRUDForms
             this.panelGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwEmployees)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.gbxCRUD.ResumeLayout(false);
             this.panelSidebar.ResumeLayout(false);
+            this.gbxCRUD.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -17,7 +17,7 @@ namespace FormUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeForm());  //ilkin proyekti secirik bununla
+            Application.Run(new ProfessionAndCompanyForm());  //ilkin proyekti secirik bununla
         }
     }
 }

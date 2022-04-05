@@ -50,5 +50,29 @@ namespace MusicLibrary.Business.Concrete
         {
             this._professionDal.Update(profession);
         }
+     
+
+        public List<Profession> Search(string name, int strParam)
+        {
+            var result = new List<Profession>();
+
+            switch (strParam)
+            {
+                case -1:
+                case 0:
+                    result = this._professionDal.GetAll(m => m.Name.Contains(name));
+                    break;
+                case 1:
+                    result = this._professionDal.GetAll(m => m.Name.StartsWith(name));
+                    break;
+                case 2:
+                    result = this._professionDal.GetAll(m => m.Name.EndsWith(name)  );
+                    break;
+            }
+
+
+
+            return result;
+        }
     }
 }

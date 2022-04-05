@@ -17,5 +17,7 @@ namespace Business.Abstract
         int GetNextId();
 
         void DeleteAll();
+        List<Company> Search(string name, int strParam);
+
     }
 }

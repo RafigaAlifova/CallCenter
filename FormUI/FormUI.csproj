@@ -78,11 +78,11 @@
     <Compile Include="CRUDForms\EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUDForms\Test.cs">
+    <Compile Include="CRUDForms\ProfessionAndCompanyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUDForms\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
+    <Compile Include="CRUDForms\ProfessionAndCompanyForm.Designer.cs">
+      <DependentUpon>ProfessionAndCompanyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,8 +92,8 @@
     <EmbeddedResource Include="CRUDForms\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUDForms\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
+    <EmbeddedResource Include="CRUDForms\ProfessionAndCompanyForm.resx">
+      <DependentUpon>ProfessionAndCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

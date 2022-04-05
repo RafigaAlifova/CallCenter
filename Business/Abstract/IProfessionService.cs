@@ -20,6 +20,8 @@ namespace Business.Abstract
         Profession Get(int id);
 
         int GetNextId();
+        List<Profession> Search(string name ,int strParam);
+
 
         void DeleteAll();
     }

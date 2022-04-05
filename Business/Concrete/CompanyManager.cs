@@ -7,46 +7,70 @@ namespace Business.Concrete
 {
     public class CompanyManager : ICompanyService
     {
-        private readonly ICompanyDal _compnyDal;
+        private readonly ICompanyDal _companyDal;
 
         public CompanyManager(ICompanyDal compnyDal)
         {
-            _compnyDal = compnyDal;
+            _companyDal = compnyDal;
         }
 
         public void Add(Company company)
         {
-            this._compnyDal.Add(company);
+            this._companyDal.Add(company);
         }
 
         public void Delete(Company company)
         {
-            this._compnyDal.Delete(company);
+            this._companyDal.Delete(company);
         }
 
         public void DeleteAll()
         {
-            this._compnyDal.DeleteAll();
+            this._companyDal.DeleteAll();
         }
 
         public Company Get(int id)
         {
-            return this._compnyDal.Get(m => m.Id == id);
+            return this._companyDal.Get(m => m.Id == id);
         }
 
         public List<Company> GetAll()
         {
-            return this._compnyDal.GetAll();
+            return this._companyDal.GetAll();
         }
 
         public int GetNextId()
         {
-            return this._compnyDal.GetNextId();
+            return this._companyDal.GetNextId();
         }
 
         public void Update(Company company)
         {
-            this._compnyDal.Update(company);
+            this._companyDal.Update(company);
         }
+
+        public List<Company> Search(string name, int strParam)
+        {
+            var result = new List<Company>();
+
+            switch (strParam)
+            {
+                case -1:
+                case 0:
+                    result = this. _companyDal.GetAll(m => m.Name.Contains(name));
+                    break;
+                case 1:
+                    result = this._companyDal.GetAll(m => m.Name.StartsWith(name));
+                    break;
+                case 2:
+                    result = this._companyDal.GetAll(m => m.Name.EndsWith(name));
+                    break;
+            }
+
+
+
+            return result;
+        }
+
     }
 }
